@@ -56,3 +56,28 @@ class CityValidator:
                     crowded_spots[(r, c)] = total
 
         return crowded_spots
+# --- 実行・検証用コード（変更不要） ---
+if __name__ == "__main__":
+    # テストデータ
+    test_area = [
+        [0, 10, 5, 0, 8],   # 行0
+        [0, 12, 6, 0, 8],   # 行1
+        [5, 15, 0, 0, 10],  # 行2
+        [5, 5,  0, 0, 5],   # 行3
+        [0, 0,  0, 0, 0]    # 行4
+    ]
+
+    validator = CityValidator(test_area)
+
+    # 1. 日照権チェックの実行
+    print("--- 日照権チェック ---")
+    sunlight_issues = validator.check_sunlight()
+    print(f"日照権侵害リスト: {sunlight_issues}")
+    # 期待される出力例: [(0, 1), (1, 2), (2, 4)] など（ロジックに基づいて計算してください）
+
+    # 2. 過密エリアチェックの実行
+    print("\n--- 過密エリアチェック (閾値: 30) ---")
+    crowded = validator.find_crowded_zones(30)
+    print(f"過密エリア: {crowded}")
+    # 期待される出力例: {(1, 1): 37, (2, 1): 32} など
+
