@@ -1,3 +1,148 @@
+CityValidator (AI City Development Mission)
+Overview
+
+This program validates city blocks based on building height data represented as a 2D array.
+It checks urban areas from two perspectives:
+
+Requirement A: Sunlight Rights Validation
+
+Requirement B: Crowded Area Detection
+
+This project was implemented as a school assignment to practice 2D array handling, boundary checking, and the use of tuples and dictionaries in Python.
+
+Technologies & Concepts
+
+Python 3.x
+
+2D arrays (list of lists)
+
+for-loops
+
+Conditional statements (if)
+
+Tuples (row, col)
+
+Dictionaries (dict)
+
+Data Structure
+
+City data is represented as a 5×5 two-dimensional list:
+
+test_area = [
+    [0, 10, 5, 0, 8],
+    [0, 12, 6, 0, 8],
+    [5, 15, 0, 0, 10],
+    [5, 5,  0, 0, 5],
+    [0, 0,  0, 0, 0]
+]
+
+
+Rows represent north to south
+
+Columns represent west to east
+
+Values indicate building height (0 means an empty lot)
+
+Elements are accessed using grid[row][col].
+
+Class Design
+CityValidator Class
+Constructor
+CityValidator(grid_data)
+
+
+grid_data: 2D list containing building height data
+
+Stores the number of rows and columns internally
+
+Requirement A: Sunlight Rights Check
+Description
+
+For each block, the program checks whether the southern neighbor (row + 1) has a height greater than or equal to the current block.
+If so, the block is considered to have a sunlight issue.
+
+Method
+check_sunlight()
+
+Return Value
+[(row, col), ...]
+
+
+A list of coordinates where sunlight rights are violated
+
+Implementation Notes
+
+The southernmost row is excluded because it has no southern neighbor
+
+Boundary-safe logic is used to avoid IndexError
+
+Requirement B: Crowded Area Detection
+Description
+
+For each block, the program calculates the total height of:
+
+The current block
+
+North
+
+South
+
+East
+
+West neighbors
+
+If the total exceeds the specified threshold, the block is marked as a crowded area.
+
+Method
+find_crowded_zones(threshold)
+
+Parameters
+
+threshold: Integer value used as the crowded-area criterion
+
+Return Value
+{ (row, col): total_height, ... }
+
+
+Key: Block coordinates as a tuple
+
+Value: Total building height
+
+Implementation Notes
+
+Each neighboring block is checked individually to ensure it exists
+
+Tuples are used as dictionary keys to represent coordinates clearly
+
+How to Run
+python city_validator.py
+
+
+The program outputs:
+
+A list of blocks with sunlight violations
+
+A dictionary of crowded areas and their total heights
+
+What I Learned / Challenges
+
+A 2D array requires row-first, column-second access
+
+Boundary handling is critical when checking neighboring cells
+
+Tuples are immutable and suitable as dictionary keys
+
+Writing clear conditional logic helps prevent runtime errors
+
+Handling edge cases (especially at the borders of the grid) was the most challenging part, but breaking the logic into small steps made it manageable.
+
+Conclusion
+
+Through this assignment, I gained a solid understanding of 2D array operations and safe boundary-aware logic in Python.
+This experience also reinforced the importance of writing readable and maintainable code.
+
+-------------------------Japanese-------------------------------
+
 CityValidator（AI都市開発ミッション）
 概要
 
