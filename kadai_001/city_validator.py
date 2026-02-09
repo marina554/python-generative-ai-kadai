@@ -56,6 +56,7 @@ class CityValidator:
                     crowded_spots[(r, c)] = total
 
         return crowded_spots
+        
 # --- 実行・検証用コード（変更不要） ---
 if __name__ == "__main__":
     # テストデータ
@@ -80,4 +81,5 @@ if __name__ == "__main__":
     crowded = validator.find_crowded_zones(30)
     print(f"過密エリア: {crowded}")
     # 期待される出力例: {(1, 1): 37, (2, 1): 32} など
+
 
