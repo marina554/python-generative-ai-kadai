@@ -1,5 +1,5 @@
 CityValidator (AI City Development Mission)
-Overview
+##Overview
 
 This program validates city blocks based on building height data represented as a 2D array.
 It checks urban areas from two perspectives:
@@ -10,7 +10,7 @@ Requirement B: Crowded Area Detection
 
 This project was implemented as a school assignment to practice 2D array handling, boundary checking, and the use of tuples and dictionaries in Python.
 
-Technologies & Concepts
+##Technologies & Concepts
 
 Python 3.x
 
@@ -24,7 +24,7 @@ Tuples (row, col)
 
 Dictionaries (dict)
 
-Data Structure
+##Data Structure
 
 City data is represented as a 5×5 two-dimensional list:
 
@@ -144,7 +144,7 @@ This experience also reinforced the importance of writing readable and maintaina
 -------------------------Japanese-------------------------------
 
 CityValidator（AI都市開発ミッション）
-概要
+##概要
 
 本プログラムは、2次元配列で表現された都市の建物高さデータをもとに、
 以下の2つの観点から都市区画をチェックするための検証ツールです。
@@ -155,7 +155,7 @@ CityValidator（AI都市開発ミッション）
 
 スクール課題として、2次元配列の操作・境界条件の扱い・辞書とタプルの理解を目的に実装しました。
 
-使用技術・前提知識
+##使用技術・前提知識
 
 Python 3.x
 
@@ -169,7 +169,7 @@ for ループ
 
 辞書（dict）
 
-データ構造について
+##データ構造について
 
 都市データは、次のような 5×5 の2次元配列で表現されます。
 
